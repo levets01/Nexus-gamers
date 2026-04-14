@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icono -->
+    <link rel="icon" href="src/icono.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="diseño/styles.css">
+
+    <title>Nexus Gaming | Productos</title>
+</head>
+
+<body>
+
+      <!-- HEADER -->
+    <header class="main-header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html" class="logo-container">
+                    <img src="img/log4.png" alt="Logo">
+                    <span class="logo-text">Nexus Gaming</span>
+                </a>
+            </div>
+
+            <!-- MENÚ DE NAVEGACIÓN -->
+            <ul class="menu">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="quiensomos.html">Quienes somos</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- TÍTULO DE LA PÁGINA -->
+    <section class="page-title">
+        <h1>Nuestros Productos</h1>
+        <p>Equipos de alto rendimiento para gamers y creadores</p>
+    </section>
+
+    <!-- GRID DE PRODUCTOS -->
+    <main class="products-container">
+
+        <!-- Producto 1 -->
+        <div class="product-card">
+            <span class="product-status">Disponible</span>
+            <img src="img/pc1.jpeg" alt="MSI Bravo" class="product-img">
+            <h3>MSI Bravo Intel i9</h3>
+            <p class="specs">16GB RAM | 512GB SSD</p>
+            <P class="specs">RTX 580 DE 8GB </P>
+            <p class="price">$4.399.900</p>
+            <button class="btn-cart">Añadir al carrito</button>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product-card">
+            <span class="product-status">Disponible</span>
+            <img src="img/pc2.jpeg" alt="Nexus Aether" class="product-img">
+            <h3>Nexus Aether RTX 4070</h3>
+            <p class="specs">i7-14700K · 32GB · 1TB NVMe</p>
+             <P class="specs">RTX 580 DE 8GB </P>
+            <p class="price">$5.299.900</p>
+            <button class="btn-cart">Añadir al carrito</button>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product-card">
+            <span class="product-status">Disponible</span>
+            <img src="img/pc3.jpeg" alt="ASUS ROG" class="product-img">
+            <h3>ASUS ROG Strix G16</h3>
+            <p class="specs">i9 · RTX 4080 · 32GB · 1TB</p>
+             <P class="specs">RTX 580 DE 12GB </P>
+            <p class="price">$6.499.900</p>
+            <button class="btn-cart">Añadir al carrito</button>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="product-card">
+            <span class="product-status">Disponible</span>
+            <img src="img/pc4.jpeg" alt="Nexus Bundle" class="product-img">
+            <h3>Nexus Core Bundle</h3>
+            <p class="specs">Teclado + Mouse + Mousepad</p>
+             <P class="specs">RTX 580 DE 12GB </P>
+            <p class="price">$349.900</p>
+            <button class="btn-cart">Añadir al carrito</button>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <p>© 2026 Nexus Gaming · PCs de alto rendimiento</p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        const botones = document.querySelectorAll('.btn-cart');
+        botones.forEach(btn => {
+            btn.addEventListener('click', () => {
+                alert('Producto añadido al carrito');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

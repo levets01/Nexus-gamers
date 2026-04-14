@@ -1,0 +1,875 @@
+/*  BASE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #0d0f12;
+    color: #e5e9f0;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Minecraft', monospace;
+}
+
+.menu li a {
+    font-family: 'Minecraft', monospace;
+    letter-spacing: 1px;
+}
+
+
+/*  CONTENEDOR REUTILIZABLE  */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+/*  HEADER  */
+
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13, 15, 18, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+/* Logo */
+
+.logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo img {
+    height: 42px;
+    width: auto;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff, #a0a0a0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
+}
+
+
+/* Menú */
+
+.menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #e5e9f0;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    padding-bottom: 4px;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+
+/* ========== HERO ========== */
+
+.hero {
+    text-align: center;
+    padding: 5rem 2rem 3rem;
+    background: linear-gradient(145deg, #0d0f12 0%, #13161c 100%);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff, #b0b0b0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #9ca3af;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Botones */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem auto 0;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-outline {
+    display: inline-block;
+    padding: 0.75rem 1.8rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    border: none;
+}
+
+.btn-primary {
+    background: #ffffff;
+    color: #0d0f12;
+}
+
+.btn-primary:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+
+/* ========== TEXTO INTRO ========== */
+
+.intro-text {
+    max-width: 800px;
+    margin: 3rem auto;
+    text-align: center;
+    font-size: 1.05rem;
+    padding: 0 1.5rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+
+/* ========== VIDEO ========== */
+
+.video-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 2rem;
+}
+
+.video-box {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.video-box:hover {
+    transform: scale(1.01);
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    display: block;
+}
+
+
+/* ========== HIGHLIGHTS (POR QUÉ ELEGIRNOS) ========== */
+
+.highlights {
+    padding: 4rem 0 5rem;
+    background: #0a0c0f;
+}
+
+.highlights h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.5px;
+}
+
+.highlights-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.highlight-card {
+    background: #13161c;
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 220px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.15);
+    background: #181c24;
+}
+
+.highlight-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.highlight-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.highlight-card p {
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+
+/* ========== FOOTER ========== */
+
+.main-footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: #0a0c0f;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.footer-tagline {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: #4a5562;
+}
+
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .intro-text {
+        font-size: 0.95rem;
+        margin: 2rem auto;
+    }
+    .video-box iframe {
+        height: 250px;
+    }
+    .highlights h2 {
+        font-size: 1.5rem;
+    }
+    .highlight-card {
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        gap: 1rem;
+    }
+    .menu li a {
+        font-size: 0.85rem;
+    }
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    .btn-primary,
+    .btn-outline {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
+    .hero-buttons {
+        gap: 0.75rem;
+    }
+}
+
+
+/* ========== PÁGINA DE PRODUCTOS ========== */
+
+
+/* Título de página */
+
+.page-title {
+    text-align: center;
+    padding: 3rem 2rem 1rem;
+}
+
+.page-title h1 {
+    font-family: 'Minecraft', monospace;
+    font-size: 2.2rem;
+    background: linear-gradient(135deg, #fff, #aaa);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.page-title p {
+    font-family: 'Inter', sans-serif;
+    color: #9ca3af;
+    font-size: 1rem;
+}
+
+
+/* Contenedor de productos (grid sencillo) */
+
+.products-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+
+/* Tarjeta de producto */
+
+.product-card {
+    background: #13161c;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 1.5rem;
+    width: 260px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Estado (Disponible) */
+
+.product-status {
+    display: inline-block;
+    background: #10b981;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+
+/* Icono del producto */
+
+.product-icon {
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+}
+
+
+/* Título del producto (usa Minecraft) */
+
+.product-card h3 {
+    font-family: 'Minecraft', monospace;
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Especificaciones */
+
+.specs {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 0.8rem;
+}
+
+
+/* Precio */
+
+.price {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+
+/* Botón añadir al carrito */
+
+.btn-cart {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-cart:hover {
+    background: white;
+    color: #0d0f12;
+}
+
+
+/* Footer */
+
+.main-footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: #0a0c0f;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* ========== PRODUCTOS ========== */
+
+/* Título de la página */
+.page-title {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.page-title h1 {
+    font-family: 'Minecraft', monospace;
+    font-size: 2rem;
+}
+
+.page-title p {
+    font-family: 'Inter', sans-serif;
+    color: #aaa;
+}
+
+/* Contenedor de productos (grid) */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 1rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tarjeta de cada producto */
+.product-card {
+    background: #13161c;
+    border-radius: 16px;
+    padding: 1.2rem;
+    width: 250px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Imagen del producto */
+.product-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0.8rem;
+}
+
+/* Etiqueta "Disponible" */
+.product-status {
+    background: #10b981;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Título del producto */
+.product-card h3 {
+    font-family: 'Minecraft', monospace;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Especificaciones */
+.specs {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+}
+
+/* Precio */
+.price {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.8rem;
+}
+
+/* Botón añadir al carrito */
+.btn-cart {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-cart:hover {
+    background: white;
+    color: black;
+}
+
+/* Celular */
+@media (max-width: 768px) {
+    .product-card {
+        width: 200px;
+    }
+    
+    .page-title h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ESTILO PARA LAS IMÁGENES */
+
+.product-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-family: 'Minecraft', monospace;
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.specs {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 0.8rem;
+}
+
+.price {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.btn-cart {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-cart:hover {
+    background: white;
+    color: #0d0f12;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: #0a0c0f;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+
+/* aca esta el css de el apartado quienes somos ?*/
+
+#quienessomos {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* BODY */
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #0d0f12;
+    color: #e5e9f0;
+}
+
+
+/* HEADER */
+
+.main-header {
+    background: rgba(13, 15, 18, 0.95);
+    padding: 15px 40px;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* LOGO */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logo-text {
+    font-family: 'Minecraft', monospace;
+    color: white;
+    font-size: 18px;
+}
+
+
+/* MENU */
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-family: 'Minecraft', monospace;
+    color: #e5e9f0;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+
+/* CONTENEDOR */
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+
+/* CONTACTO */
+
+.contact-section {
+    text-align: center;
+}
+
+
+/* TITULO */
+
+.contact-section h2 {
+    font-family: 'Minecraft', monospace;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+
+/* TEXTO */
+
+.contact-section p {
+    color: #9ca3af;
+    margin-bottom: 30px;
+}
+
+
+/* FORM */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* INPUTS */
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #2a2f36;
+    background: #13161c;
+    color: white;
+    font-size: 14px;
+}
+
+
+/* PLACEHOLDER */
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #6b7280;
+}
+
+
+/* FOCUS */
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 1px solid white;
+    outline: none;
+}
+
+
+/* BOTON */
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    background: white;
+    color: #0d0f12;
+    font-family: 'Minecraft', monospace;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #e5e5e5;
+}
+
+
+/* ===== MAPA ===== */
+
+.map-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.map-section h3 {
+    font-family: 'Minecraft', monospace;
+    margin-bottom: 15px;
+}
+
+
+/* CONTENEDOR MAPA */
+
+.map-box {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #2a2f36;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+/* IFRAME */
+
+.map-box iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
